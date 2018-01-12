@@ -1,0 +1,30 @@
+initializing
+  git init
+
+adding changes
+  git add -A
+  git add .
+
+when you're all confused
+  git status
+
+commit
+  git commit -m "msg"
+  
+commit with adding all changes
+  git commit -a -m "msg"
+
+adding remote (after doing ssh stuff cf. https://help.github.com/articles/connecting-to-github-with-ssh/) 
+  git remote add [remote name] git@github.com:w-v/[repo name].git
+
+pushing
+  git push [remote name] master
+
+creating a branch and switching to it
+  git checkout -b loadmore
+
+checkout the master branch
+  git checkout master
+
+checkout another branch
+  git checkout -b [branch name]
