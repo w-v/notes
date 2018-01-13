@@ -28,3 +28,10 @@ checkout the master branch
 
 checkout another branch
   git checkout -b [branch name]
+
+merge branch b with branch a
+  git checkout a
+  git merge b
+
+delete branch a
+  git branch -d a
