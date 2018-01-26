@@ -1,0 +1,44 @@
+MICHEL 400
+
+
+  chezroger 401,
+  //Tester que la quantité d'une livraison ne doit pas dépasser la capacité de la citerne
+
+
+VANESSA   2
+  
+  BOURGOGNE      chienquifume 2 chatquiboit 1;
+  //C'est aussi la cas si la quantité totale de plusieurs livraison dépasse la capacité
+
+
+  BOURGOGNE      croisement 70 superv 40;
+
+
+JEANMICH  600000
+ 
+ BOURGOGNE     chezroger 1  chezmarcel 599998 ,
+ //Si la citerne n'est pas pleine ça ne devrait pas lancer d'erreurs
+
+ cheroger 0 ;
+ //C'est une erreur sémantique mais ça ne devrait pas poser d'erreur au niveau syntaxique
+
+
+//Erreurs sémantiques :
+
+
+
+  elephant 90;
+
+POTIN
+
+  croisement 40  potin 50,
+
+  BOURGOGNE      elephant 100;
+
+DURAND 180
+
+  BEAUJOLAIS     bouiboui 120 croisement 50,
+
+  superv 110;
+
+ /
