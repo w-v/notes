@@ -1,0 +1,24 @@
+serverside :
+
+sudo apt-get install samba
+
+# set a password for a user
+sudo smbpasswd -a <user_name>
+
+# smb.conf :
+
+[<folder_name>]
+path = /home/<user_name>/<folder_name>
+valid users = <user_name>
+read only = no
+
+# restart to test
+sudo service smbd restart
+
+clientside :
+
+sudo apt-get install smbclient
+      # List all shares:
+      smbclient -L //<HOST_IP_OR_NAME>/<folder_name> -U <user>
+      # connect:
+      smbclient //<HOST_IP_OR_NAME>/<folder_name> -U <user>
