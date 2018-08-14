@@ -1,0 +1,42 @@
+## List Docker CLI commands
+docker
+docker container --help
+
+## Display Docker version and info
+docker --version
+docker version
+docker info
+
+## Execute Docker image
+docker run hello-world
+
+## List Docker images
+docker image ls
+
+## List Docker containers (running, all, all in quiet mode)
+docker container ls
+docker container ls --all
+docker container ls -aq
+
+
+## Run the app, mapping your machines port 4000 to the containers published port 80 using -p:
+docker run -p 4000:80 friendlyhello
+
+
+## Now lets run the app in the background, in detached mode:
+docker run -d -p 4000:80 friendlyhello
+
+##Now use docker container stop to end the process, using the CONTAINER ID, like so:
+docker container stop 1fa4ab2cf395
+
+## Now run the build command. This creates a Docker image, which we’re going to tag using -t so it has a friendly name.
+docker build -t friendlyhello .
+
+## shell access on running container
+docker exec -it [container tag] /bin/bash
+
+## bind mounts : mapping a directory on the host into the container
+docker run -v /home/user/dev/:/app
+
+## save the container to a new image
+docker commit [container tag] newimage
