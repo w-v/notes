@@ -1,0 +1,22 @@
+#################################
+#    Emergency reset method     #
+#################################
+
+1 - manually set the computer IP and netmask (no need to set gateway)
+      sudo ifconfig eth0 192.168.1.2 netmask 255.255.255.0
+
+2 - plug an ethernet cable from the computer to any switch port of the router
+
+3 - power on the router, when the DMZ LED lights up, hit the reset button until that LED blinks
+
+4 - try to telnet into the router
+      telnet 192.168.1.1
+
+5 - run these command on the router
+      mount_root
+      firstboot
+      reboot -f
+
+6 - can now access config via 192.168.1.1 in a browser
+
+7 - try to be less stupid next time you configure it

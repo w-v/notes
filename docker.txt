@@ -40,3 +40,6 @@ docker run -v /home/user/dev/:/app
 
 ## save the container to a new image
 docker commit [container tag] newimage
+
+## see stdout for container ID (until it is removed)
+docker logs ID
